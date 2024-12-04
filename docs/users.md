@@ -3,7 +3,7 @@
 ## Register
 
 **Method:** `POST`  
-**URL:** `/api/users/register`
+**Endpoint:** `/api/users/register`
 
 ### Request Body:
 
@@ -33,7 +33,7 @@
 ## Login
 
 **Method:** `POST`  
-**URL:** `/api/users/login`
+**Endpoint:** `/api/users/login`
 
 ### Request Body:
 
@@ -56,7 +56,7 @@
 ## Get Data
 
 **Method:** `GET`  
-**URL:** `/api/users/profile`
+**Endpoint:** `/api/users/profile`
 
 ### Request Header:
 
@@ -81,7 +81,7 @@ Headers: Authorization Bearer Token
 ## Logout
 
 **Method:** `POST`  
-**URL:** `/api/users/logout`
+**Endpoint:** `/api/users/logout`
 
 ### Request Header:
 
