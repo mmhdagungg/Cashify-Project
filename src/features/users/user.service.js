@@ -48,4 +48,16 @@ const getUserById = async (id) => {
   return user;
 };
 
-module.exports = { registerUser, loginUser, getUserById };
+const updateUserName = async (id, newName) => {
+  const user = await prisma.user.findUnique({ where: { id } });
+  if (!user) {
+    throw new Error("User not found");
+  }
+
+  return prisma.user.update({
+    where: { id },
+    data: { name: newName },
+  });
+};
+
+module.exports = { registerUser, loginUser, getUserById, updateUserName };

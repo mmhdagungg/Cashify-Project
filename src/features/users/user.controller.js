@@ -1,4 +1,4 @@
-const { registerUser, loginUser, getUserById } = require("./user.service");
+const { registerUser, loginUser, getUserById, updateUserName} = require("./user.service");
 
 const register = async (req, res) => {
   try {
@@ -27,6 +27,17 @@ const getUser = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    const updatedUser = await updateUserName(req.user.id, req.body.name);
+    res.status(200).json({ message: "User name updated successfully", user: updatedUser });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+
+
 const logout = async (req, res) => {
   try {
     res.status(200).json({ message: "Logout successful", token: null });
@@ -35,4 +46,4 @@ const logout = async (req, res) => {
   }
 };
 
-module.exports = { register, login, getUser, logout };
+module.exports = { register, login, getUser, logout, updateUser };

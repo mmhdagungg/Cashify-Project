@@ -25,7 +25,7 @@
     "name": "Muhammad Ariiq Al-Basith",
     "email": "ariiq@express.com",
     "password": "ini_token",
-    "createdAt": "2024-12-03T15:04:02.841Z"
+    "createdAt": "dateTime"
   }
 }
 ```
@@ -73,7 +73,40 @@ Headers: Authorization Bearer Token
     "name": "Muhammad Ariiq Al-Basith",
     "email": "ariiq@express.com",
     "password": "ini_token",
-    "createdAt": "2024-12-03T15:04:02.841Z"
+    "createdAt": "dateTime"
+  }
+}
+```
+
+## Update Data (Name)
+
+**Method:** `PUT`  
+**Endpoint:** `/api/users/profile`
+
+### Request:
+
+```json
+Headers: Authorization Bearer Token
+```
+
+**Body**
+```json
+{
+  "name": "Ariiq Al-Basith"
+}
+```
+
+### Response:
+
+```json
+{
+  "message": "User name updated successfully",
+  "user": {
+    "id": 1,
+    "name": "Ariiq Al-Basith",
+    "email": "ariiq@express.com",
+    "password": "password",
+    "createdAt": "dateTime"
   }
 }
 ```
